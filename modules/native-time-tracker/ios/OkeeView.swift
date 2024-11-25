@@ -25,10 +25,14 @@ struct OkeeView: View {
         }
     }
     var body: some View {
-        ContentView()
-            .onAppear {
-                requestFamilyAuthorization() // Request authorization when the app appears
-            }
+        if #available(iOS 16.0, *) {
+            ContentView()
+                .onAppear {
+                    requestFamilyAuthorization() // Request authorization when the app appears
+                }
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 
