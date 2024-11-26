@@ -8,6 +8,7 @@
 import SwiftUI
 import FamilyControls
 import DeviceActivity
+import DeviceActivity
 
 struct OkeeView: View {
     let center = AuthorizationCenter.shared
